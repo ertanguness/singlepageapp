@@ -1,0 +1,45 @@
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+#menu {
+    width: 200px;
+    float: left;
+}
+
+#menu ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#menu li {
+    margin: 10px 0;
+    position: relative;
+}
+
+#menu a {
+    text-decoration: none;
+    color: rgb(179, 47, 47);
+}
+
+#menu a.active {
+    font-weight: bold;
+    color: blue;
+}
+
+#menu ul ul {
+    display: none;
+    position: absolute;
+    left: 100px;
+    top: 0;
+    padding-left: 0;
+}
+
+#menu li:hover>ul {
+    display: block;
+}
+
+#content {
+    margin-left: 220px;
+}
