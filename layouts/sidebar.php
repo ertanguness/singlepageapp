@@ -22,7 +22,7 @@
                     <a href="#"><i class="la la-rocket"></i> <span> PROJELER</span> <span class="menu-arrow"></span></a>
                     <ul style="display: none;">
                         <li><a href="/projects/list">Yeni Proje</a></li>
-                        <li><a href="/projects/lists">Proje Listesi</a></li>
+                        <li><a href="/companies/list">Firma Listesi</a></li>
                     </ul>
                 </li>
 
