@@ -256,4 +256,5 @@ if ($page == 'companies-grid.php' || $page == 'companies.php' || $page == 'compa
 	<script src="/assets/plugins/bootstrap-tagsinput/bootstrap-tagsinput.js"></script>
 <?php } ?>
 <!-- Custom JS -->
+
 <script src="/assets/js/app.js"></script>

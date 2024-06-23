@@ -21,8 +21,8 @@
                 <li class="submenu">
                     <a href="#"><i class="la la-rocket"></i> <span> PROJELER</span> <span class="menu-arrow"></span></a>
                     <ul style="display: none;">
-                        <li><a href="/projects/list">Yeni Proje</a></li>
-                        <li><a href="/companies/list">Firma Listesi</a></li>
+                        <li><a href="/projects/add">Yeni Proje</a></li>
+                        <li><a href="/projects/list">Proje Listesi</a></li>
                     </ul>
                 </li>
 
@@ -42,14 +42,16 @@
                 <li class="menu-title">
                     <span>STOK</span>
                 </li>
-                <li class="<?php echo ($page == 'clients.php' || $page == 'clients-list.php') ? 'active' : ''; ?>">
-                    <a href="clients.php"><i class="lab la-buffer"></i> <span>Stoklar</span></a>
+
+                <li>
+                    <a href="/stok/list"><i class="lab la-buffer"></i> <span>STOK</span></a>
                 </li>
+                
                 <li class="<?php echo ($page == 'clients.php' || $page == 'clients-list.php') ? 'active' : ''; ?>">
-                    <a href="clients.php"><i class="lab la-audible"></i> <span>Stok İstek Yönetimi</span></a>
+                    <a href="k.php"><i class="lab la-audible"></i> <span>Stok İstek Yönetimi</span></a>
                 </li>
-                <li class="<?php echo ($page == 'clients.php' || $page == 'clients-list.php') ? 'active' : ''; ?>">
-                    <a href="clients.php"><i class="la la-warehouse"></i> <span>Depo</span></a>
+                <li >
+                    <a href="/Depo/list"><i class="la la-warehouse"></i> <span>Depo</span></a>
                 </li>
                 <!-- STOK -->
 

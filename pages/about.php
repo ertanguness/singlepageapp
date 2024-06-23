@@ -1,2 +1,5 @@
-<h1>About</h1>
-<p>This is the about page.</p>
+
+<div class="col-6">
+    <h3>About</h3>
+    <p>This is the about page.</p>
+</div>

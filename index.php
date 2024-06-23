@@ -15,10 +15,10 @@
 <div class="main-wrapper">
     <?php include 'layouts/menu.php'; ?>
     <!-- Page Wrapper -->
-    <div class="page-wrapper">
+    <div class="page-wrapper" style="min-height: 911px;">
 
         <!-- Page Content -->
-        <div class="content container-fluid" id="content">
+        <div class="content container-fluid" id="content" style="min-width:80vw">
 
             <?php
             // URL yolunu almak ve boşsa 'home' yapmak için parse_url ve trim kullanımı

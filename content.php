@@ -1,4 +1,5 @@
 <?php
+require_once 'layouts/config.php';
 $page = isset($_GET['page']) ? $_GET['page'] : parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 
 // Başı ve sonundaki / işaretlerini temizleyin
