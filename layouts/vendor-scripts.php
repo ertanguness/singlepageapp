@@ -1,7 +1,11 @@
 <?php
-$link = $_SERVER['PHP_SELF'];
-$link_array = explode('/', $link);
-$page = end($link_array);
+// $link = $_SERVER['PHP_SELF'];
+// $link_array = explode('/', $link);
+// $page = end($link_array);
+
+
+$path = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
+$page = trim($path, '/');
 ?>
 <!-- jQuery -->
 <script src="/assets/js/jquery-3.7.1.min.js"></script>
@@ -53,8 +57,8 @@ $page = end($link_array);
 <?php } ?>
 <?php if ($page == 'ui-scrollbar.php') {   ?>
 	<!-- Plyr JS -->
-	<script src="assets/plugins/scrollbar/scrollbar.min.js"></script>
-	<script src="assets/plugins/scrollbar/custom-scroll.js"></script>
+	<script src="/assets/plugins/scrollbar/scrollbar.min.js"></script>
+	<script src="/assets/plugins/scrollbar/custom-scroll.js"></script>
 <?php } ?>
 <?php if ($page == 'ui-notification.php') {   ?>
 	<!-- Alertify JS -->
@@ -143,15 +147,15 @@ $page = end($link_array);
 <?php } ?>
 <?php if ($page == 'form-select2.php') {   ?>
 	<!-- Select 2 -->
-	<script src="assets/plugins/select2/js/select2.min.js"></script>
-	<script src="assets/plugins/select2/js/custom-select.js"></script>
+	<script src="/assets/plugins/select2/js/select2.min.js"></script>
+	<script src="/assets/plugins/select2/js/custom-select.js"></script>
 <?php } ?>
 
 <?php if ($page == 'task-board.php' || $page == 'leads-kanban.php' || $page == 'deals-kanban.php') {   ?>
 	<script src="assets/js/jquery-ui.min.js"></script>
 	<script src="assets/js/jquery.ui.touch-punch.min.js"></script>
 <?php } ?>
-<?php if ($page == 'admin-dashboard.php') {   ?>
+<?php if ($page == 'admin-dashboard') {   ?>
 	<!-- Chart JS -->
 	<script src="/assets/plugins/morris/morris.min.js"></script>
 	<script src="/assets/plugins/raphael/raphael.min.js"></script>
@@ -194,13 +198,13 @@ if ($page == 'employee-dashboard.php') { ?>
 <?php }
 if ($page == 'employees-list.php' || $page == 'leaves.php' || $page == 'leaves-employee.php' || $page == 'departments.php' || $page == 'designations.php' || $page == 'timesheet.php' || $page == 'shift-scheduling.php' || $page == 'shift-list.php' || $page == 'overtime.php' || $page == 'clients-list.php' || $page == 'project-list.php' || $page == 'leads.php' || $page == 'tickets.php' || $page == 'payments.php' || $page == 'expenses.php' || $page == 'provident-fund.php' || $page == 'salary.php' || $page == 'payroll-items.php' || $page == 'policies.php' || $page == 'expense-reports.php' || $page == 'expense-reports.php' || $page == 'payments-reports.php' || $page == 'project-reports.php' || $page == 'task-reports.php' || $page == 'user-reports.php' || $page == 'employee-reports.php' || $page == 'payslip-reports.php'  || $page == 'leave-reports.php' || $page == 'daily-reports.php' || $page == 'performance-indicator.php' || $page == 'performance-appraisal.php' || $page == 'goal-tracking.php' || $page == 'goal-type.php' || $page == 'training.php' || $page == 'trainers.php' || $page == 'training-type.php' || $page == 'promotion.php' || $page == 'resignation.php' || $page == 'termination.php' || $page == 'assets.php' || $page == 'user-all-jobs.php' || $page == 'saved-jobs.php' || $page == 'applied-jobs.php' || $page == 'job-details.php' || $page == 'job-apptitude.php' || $page == 'questions.php' || $page == 'offered-jobs.php' || $page == 'visited-jobs.php' || $page == 'archived-jobs.php' || $page == 'jobs.php' || $page == 'job-applicants.php' || $page == 'manage-resumes.php' || $page == 'shortlist-candidates.php' || $page == 'interview-questions.php' || $page == 'offer_approvals.php' || $page == 'experiance-level.php' || $page == 'candidates.php' || $page == 'schedule-timing.php'  || $page == 'users.php' || $page == 'leave-type.php' || $page == 'subscribed-companies.php' || $page == 'data-tables.php' || $page == 'invoice-reports.php' || $page == 'leads-kanban.php' || $page == 'deals.php' || $page == 'deals-details.php' || $page == 'deals-kanban.php' || $page == 'companies-grid.php' || $page == 'companies.php' || $page == 'contact-list.php' || $page == 'assets-category.php' || $page == 'assets-details.php' || $page == 'assets-new.php' || $page == 'assets-reports.php' || $page == 'leads.php' || $page == 'activities.php' || $page == 'pipeline.php' || $page == 'apptitude-result.php' || $page == 'profile.php' || $page == 'attendance-reports.php') { ?>
 	<!-- Datatable JS -->
-	<script src="assets/js/jquery.dataTables.min.js"></script>
-	<script src="assets/js/dataTables.bootstrap4.min.js"></script>
+	<script src="/assets/js/jquery.dataTables.min.js"></script>
+	<script src="/assets/js/dataTables.bootstrap4.min.js"></script>
 <?php }
 if ($page == 'leads-details.php' || $page == 'leads-kanban.php' || $page == 'leads-dashboard.php' || $page == 'deals.php' || $page == 'deals-details.php' || $page == 'deals-kanban.php' || $page == 'deals-dashboard.php' || $page == 'analytics.php' || $page == 'assets-category.php' || $page == 'assets-new.php' || $page == 'leads.php' || $page == 'activities.php') { ?>
 	<!-- Daterangepikcer JS -->
-	<script src="assets/js/moment.min.js"></script>
-	<script src="assets/plugins/daterangepicker/daterangepicker.js"></script>
+	<script src="/assets/js/moment.min.js"></script>
+	<script src="/assets/plugins/daterangepicker/daterangepicker.js"></script>
 
 
 <?php }
@@ -249,12 +253,26 @@ if ($page == 'form-validation.php') { ?>
 <?php }
 if ($page == 'companies-grid.php' || $page == 'companies.php' || $page == 'company-details.php' || $page == 'contact-details.php' || $page == 'contact-grid.php' || $page == 'contact-list.php' || $page == 'analytics' || $page == 'assets-category' || $page == 'assets-new' || $page == 'leads.php' || $page == 'activities.php' || $page == 'pipeline.php') { ?>
 	<!-- Daterangepikcer JS -->
-	<script src="assets/js/moment.min.js"></script>
-	<script src="assets/plugins/daterangepicker/daterangepicker.js"></script>
+	<script src="/assets/js/moment.min.js"></script>
+	<script src="/assets/plugins/daterangepicker/daterangepicker.js"></script>
 
 	<!-- Bootstrap Tagsinput JS -->
 	<script src="/assets/plugins/bootstrap-tagsinput/bootstrap-tagsinput.js"></script>
 <?php } ?>
 <!-- Custom JS -->
 
-<script src="/assets/js/app.js"></script>
+
+
+<!-- Daterangepikcer JS -->
+<script src="/assets/js/moment.min.js"></script>
+<script src="/assets/plugins/daterangepicker/daterangepicker.js"></script>
+
+
+<script src="/assets/js/bootstrap-datetimepicker.min.js"></script>
+
+<script src="/assets/js/jquery.dataTables.min.js"></script>
+<script src="/assets/js/dataTables.bootstrap4.min.js"></script>
+
+<script src="/assets/plugins/daterangepicker/daterangepicker.js"></script>
+
+<script src="/assets/js/select2.min.js"></script>

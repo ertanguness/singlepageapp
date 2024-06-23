@@ -30,7 +30,7 @@
 
 
                         <!-- Account Form -->
-                        <form action="admin-dashboard.php">
+                        <form action="index.php">
                             <div class="input-block mb-4">
                                 <label class="col-form-label">Email Adresi</label>
                                 <input class="form-control" type="text" value="admin@dreamstechnologies.com">

@@ -6,8 +6,9 @@ $page = isset($_GET['page']) ? $_GET['page'] : parse_url($_SERVER['REQUEST_URI']
 $page = trim($page, '/');
 
 if ($page == 'index.php' || $page == '') {
-    $page = 'home';
+    $page = 'admin-dashboard';
 }
+
 
 $pagePath = 'pages/' . $page . '.php';
 

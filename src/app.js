@@ -56,16 +56,17 @@ $(window).on("popstate", function (event) {
 $(document).ready(function () {
   $("#sidebar-menu a").click(function (event) {
     event.preventDefault();
-    const page = $(this).attr("href").substring(1);
+    //const pagedata = $(this).attr("href").substring(1);
+    var page = $(this).attr("data-page") ?? null;
     if (page !== "" && page !== null) {
       loadContent(page);
     }
   });
 
   // Load the initial content
-  const initialPage = window.location.pathname.substring(1) || "home";
+  const initialPage = window.location.pathname.substring(1) || "admin-dashboard";
   if (initialPage == "index.php") {
-    const initialPage = "home";
+    const initialPage = "admin-dashboard";
     history.replaceState(
       {
         page: initialPage,

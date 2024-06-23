@@ -382,7 +382,7 @@ $(document).ready(function () {
     $pageWrapper.css("min-height", prHeight);
   });
 
-  // Date Time Picker
+  //Date Time Picker
 
   if ($(".datetimepicker").length > 0) {
     $(".datetimepicker").datetimepicker({
@@ -423,7 +423,7 @@ $(document).ready(function () {
     });
   }
 
-  // Tooltip
+  //Tooltip;
 
   if ($('[data-bs-toggle="tooltip"]').length > 0) {
     var tooltipTriggerList = [].slice.call(

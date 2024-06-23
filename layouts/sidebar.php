@@ -16,13 +16,13 @@
                 </li>
 
                 <li>
-                    <a href="/admin-dashboard"><i class="la la-dashboard "></i> <span>ANA SAYFA</span></a>
+                    <a href="#" data-page="admin-dashboard"><i class="la la-dashboard "></i> <span>ANA SAYFA</span></a>
                 </li>
                 <li class="submenu">
-                    <a href="#"><i class="la la-rocket"></i> <span> PROJELER</span> <span class="menu-arrow"></span></a>
+                    <a href="#" ><i class="la la-rocket"></i> <span> PROJELER</span> <span class="menu-arrow"></span></a>
                     <ul style="display: none;">
-                        <li><a href="/projects/add">Yeni Proje</a></li>
-                        <li><a href="/projects/list">Proje Listesi</a></li>
+                        <li><a href="#" data-page="projects/add">Yeni Proje</a></li>
+                        <li><a href="#" data-page="projects/list">Proje Listesi</a></li>
                     </ul>
                 </li>
 
@@ -31,9 +31,9 @@
                     <span>İMALAT</span>
                 </li>
                 <li>
-                    <a href="/projects/liste"><i class="la la-pencil-alt"></i> <span>Ön İmalat</span></a>
+                    <a href="#"><i class="la la-pencil-alt"></i> <span>Ön İmalat</span></a>
                 </li>
-                <li> <a href="/error-404"><i class="la la-pencil-ruler"></i> <span>İmalat</span></a>
+                <li> <a href="#" data-page="error-404"><i class="la la-pencil-ruler"></i> <span>İmalat</span></a>
                 </li>
                 <!-- İMALAT -->
 
@@ -44,7 +44,7 @@
                 </li>
 
                 <li>
-                    <a href="/stok/list"><i class="lab la-buffer"></i> <span>STOK</span></a>
+                    <a href="#" data-page="stok/list"><i class="lab la-buffer"></i> <span>STOK</span></a>
                 </li>
                 
                 <li class="<?php echo ($page == 'clients.php' || $page == 'clients-list.php') ? 'active' : ''; ?>">
@@ -56,10 +56,19 @@
                 <!-- STOK -->
 
 
+                <!-- FİRMA -->
+                <li class="menu-title">
+                    <span>FİRMA</span>
+                </li>
+                <li>
+                    <a href="#" data-page="companies/list"><i class="lab la-buffer"></i> <span>Firmalar</span></a>
+                </li>
+
             </ul>
 
         </div>
     </div>
 </div>
+
 
 <!-- /Sidebar -->

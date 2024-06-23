@@ -10,15 +10,17 @@
 
 </head>
 
-<?php include 'layouts/body.php'; ?>
+<body>
+    
+
 <!-- Main Wrapper -->
 <div class="main-wrapper">
     <?php include 'layouts/menu.php'; ?>
     <!-- Page Wrapper -->
-    <div class="page-wrapper" style="min-height: 911px;">
+    <div class="page-wrapper">
 
         <!-- Page Content -->
-        <div class="content container-fluid" id="content" style="min-width:80vw">
+        <div class="content container-fluid" id="content">
 
             <?php
             // URL yolunu almak ve boşsa 'home' yapmak için parse_url ve trim kullanımı
@@ -41,8 +43,9 @@
 <?php include 'layouts/customizer.php'; ?>
 
 <?php include 'layouts/vendor-scripts.php'; ?>
-
+<script src="/assets/js/app.js"></script>
 <script src="/src/app.js"></script>
+
 </body>
 
 </html>

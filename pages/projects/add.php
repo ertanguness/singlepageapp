@@ -1,9 +1,3 @@
-<!--  ctrl + K + C // Comment
-      ctrl + K + U // Uncomment  
-      alt + aşağı veya yukarı ok // Move line up or down
-      shift + alt + F // Format code
--->
-
 <?php
 if ($_POST && $_POST['method'] == "add") {
 
@@ -25,8 +19,7 @@ if ($_POST && $_POST['method'] == "add") {
         } catch (PDOException $ex) {
             echo "Kayıt Başarısız" . $ex->getMessage();
         }
-  $StokAdi = "";
-       
+ 
 }
 
 
@@ -51,15 +44,15 @@ if ($_POST && $_POST['method'] == "add") {
                 $sql->execute();
                     
                 while ($row = $sql->fetch(PDO::FETCH_OBJ)) {  ?>
-                    <tr>
-                        <td><?php echo $row->id; ?></td>
-                        <td><?php echo $row->StokAdi; ?></td>
-                        <td><?php echo $row->Fiyati; ?></td>
-                        <td><?php echo $row->Birimi; ?></td>
-                        <td><button type="submit" class="btn btn-sm btn-danger">Sil</button></td>
-                    </tr>
-            
-            
+            <tr>
+                <td><?php echo $row->id; ?></td>
+                <td><?php echo $row->StokAdi; ?></td>
+                <td><?php echo $row->Fiyati; ?></td>
+                <td><?php echo $row->Birimi; ?></td>
+                <td><button type="submit" class="btn btn-sm btn-danger">Sil</button></td>
+            </tr>
+
+
             <?php }
             } catch (PDOException $ex) {
                 echo `Hata` .  $ex->getMessage();
@@ -112,24 +105,21 @@ if ($_POST && $_POST['method'] == "add") {
 </div>
 
 <script>
-    $(".btn-danger").click(function() {
-        var $row = $(this).closest("tr"); // Find the row
-        var $text = $row.find("td").eq(0).text(); // Find the text
-        
-        $.ajax({
-            type: "POST",
-            url: "/delete.php",
-            data: {
-                id: $text,
-                "method": "stoklar"
-            },
-            success: function(data) {
-                console.log(data);
-                $row.remove();
-            }
-        });
+$(".btn-danger").click(function() {
+    var $row = $(this).closest("tr"); // Find the row
+    var $text = $row.find("td").eq(0).text(); // Find the text
+
+    $.ajax({
+        type: "POST",
+        url: "/delete.php",
+        data: {
+            id: $text,
+            "method": "stoklar"
+        },
+        success: function(data) {
+            console.log(data);
+            $row.remove();
+        }
     });
+});
 </script>
-
-
-
